@@ -1,0 +1,42 @@
+html, body {
+    margin: 0;
+    padding: 50px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+#open-modal, #close-modal {
+    background-color: royalblue;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    font-size: 20px;
+    cursor: pointer; /* show that button clickable  */
+}
+
+#modal {
+    background-color: orange;
+    max-width: 600px; /* to avoid it cover all the screen (fullscreen) */
+    margin: 0 auto;
+    padding: 20px;
+    height: 200px;
+    
+    position: relative; /* to be able to place the modal wherever I want in the screen relative to its parent element (#overlay) */
+    top: 30%; /* positioning the #modal 30% from the top of the parent element (#overlay) */
+}
+
+
+#overlay{
+    display: none; /* setting the initial state of the modal (hiding it) */
+    
+    width: 100%; /* making the #overlay fullscreen */
+    height: 100%;
+    
+    position: absolute; /* to avoid the rest of the pages's content to move when opening or closing the modal  */
+    top: 0; 
+    left: 0;
+    bottom: 0;
+    right: 0;
+    
+    background-color: rgba(0, 0, 0, 0.3);
+}
